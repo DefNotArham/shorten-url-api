@@ -5,7 +5,14 @@ import isValidUrl from "../utils/isValidUrl.js";
 
 import { nanoid } from "nanoid";
 
-const shortenUrlController = async (req: Request, res: Response) => {
+interface URLType {
+  url: string;
+}
+
+const shortenUrlController = async (
+  req: Request<{}, {}, URLType>,
+  res: Response,
+) => {
   const { url } = req.body;
   try {
     if (!url || typeof url !== "string")
