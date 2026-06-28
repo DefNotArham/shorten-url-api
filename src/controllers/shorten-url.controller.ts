@@ -31,12 +31,14 @@ const shortenUrlController = async (
       shortCode = nanoid(6);
     }
 
-    const shortenUrl = await ShortenUrl.create({
+    await ShortenUrl.create({
       originalUrl: url,
       shortCode,
     });
 
-    res.status(200).json({ success: true, shortenUrl });
+    const shortUrl = `${req.protocol}://${req.get("host")}/${shortCode}`;
+
+    res.status(201).json({ success: true, shortUrl });
   } catch (error) {
     console.log(error);
     res.status(500).json({ success: false, message: "Server error" });
