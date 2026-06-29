@@ -13,6 +13,6 @@ app.use(express.json());
 app.use("/url", urlRoutes);
 
 app.listen(port, async () => {
-  console.log(`Server is running on port ${port}`);
   await connectDb();
+  console.log(`Server is running on port ${port}`);
 });

@@ -36,7 +36,7 @@ const shortenUrlController = async (
       shortCode,
     });
 
-    const shortUrl = `${req.protocol}://${req.get("host")}/${shortCode}`;
+    const shortUrl = `${req.protocol}://${req.get("host")}/url/${shortCode}`;
 
     res.status(201).json({ success: true, shortUrl });
   } catch (error) {
