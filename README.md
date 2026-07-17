@@ -11,8 +11,7 @@ Create shortened links, redirect users to the original URL, and track the number
 - 🔗 Create shortened URLs
 - ⚡ Fast redirects
 - 🧬 Unique short code generation using NanoID
-- ✅ URL validation
-- 📊 Click tracking
+- ✅ URL validation 
 - 🗄️ MongoDB database storage
 - 🔒 Prevent duplicate short codes
 - ⏱️ Automatic timestamps
@@ -37,7 +36,6 @@ Create shortened links, redirect users to the original URL, and track the number
 4. The URL is stored in MongoDB
 5. User receives a shortened URL
 6. Visiting the shortened URL redirects to the original website
-7. Each visit increments the click counter
 
 ---
 
